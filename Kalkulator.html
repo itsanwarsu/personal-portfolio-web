@@ -16,11 +16,11 @@
      
      .calculator {
        background: #2c2c2c;
-       padding: 20px;
+       padding: 30px;
        border-radius: 20px;
        border: 15px solid black;
        box-shadow: 0 0 15px rgba(0,0,0,0.5);
-       width: 260px;
+       width: 250px;
      }
      
      #display {
@@ -74,13 +74,22 @@
      .equal:hover {
        background: darkgreen;
      }
+     .history {
+       margin-top: 20px;
+       background: #eee;
+       padding: 10px;
+       border-radius: 10px;
+       display: none;
+       max-height: 150px;
+       overflow-y: auto;
+     }
     </style>
     </head>
     <body>
       <div class="calculator">
         <input type="text" id="display" disabled>
         <div class="buttons">
-          <button class="clear" onclick="cleardisplay()">C</button>
+          <button class="clear" onclick="cleardisplay()">AC</button>
           <button class="operator" onclick="appendValue('/')">/</button>
           <button class="operator" onclick="appendValue('*')">*</button>
           <button class="operator"onclick="appendValue('-')">-</button>
@@ -101,11 +110,28 @@
           <button onclick="appendValue('.')">.</button>
           
           <button class="equal"onclick="calculate()">=</button>
+          <button onclick="slice()">⌫</button>
+          <button onclick="toggleHistory()">H</button>
+          <button onclick="clearHistory()">CH</button>
+        </div>
+       
+        <div class="history" id="historyBox">
+         <h2 style="font-size:15px">Riwayat Kalkulasi
+         </h2>
+         <div id="historyList">
+           
+         </div>
+         
+          
         </div>
       </div>
       <script>
-        const display = document 
-          .getElementById("display")
+        let historyData = JSON.parse(
+        localStorage.getItem(
+"calculatorHistory"
+)
+         ) || [];
+        const display = document.getElementById("display")
         
         function appendValue(value){
         display.value += value;
@@ -113,17 +139,57 @@
         function cleardisplay() {
           display.value = "";
         }
+        function slice() {
+          display.value = display.value.slice(0, -1);
+        }
+        function clearHistory() {
+          historyData = [];
+          updateHistory();
+          localStorage.removeItem(
+          "calculatorHistory"
+          );
+        }
         
        function calculate() {
+         const expression = display.value;
          try {
-           display.value = eval(display.value)
+           const result = eval(expression);
+           historyData.push(`${expression} = ${result}`);
+           localStorage.setItem(
+           "calculatorHistory",
+           JSON.stringify(historyData)
+           );
+           updateHistory();
+          
+           display.value=result;
          }
          catch {
-           display.value = "Error";
+           alert("Error");
          }
        }
         
-        
+        function updateHistory() {
+        const historyList = document.getElementById("historyList");
+        historyList.innerText = "";
+
+        historyData.forEach(item => {
+            const div = document.createElement("div");
+            div.className = "history-item";
+            div.textContent = item;
+            historyList.appendChild(div);
+        });
+    }
+
+    function toggleHistory() {
+        const historyBox = document.getElementById("historyBox");
+
+        if (historyBox.style.display === "none" || historyBox.style.display === "") {
+            historyBox.style.display = "block";
+        } else {
+            historyBox.style.display = "none";
+        }
+    }
+    updateHistory();
       </script>
     </body>
 </html>
