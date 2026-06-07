@@ -556,7 +556,7 @@ html {
 
    /* FAQ */
    .faq {
-    padding: 500px 30px;
+    padding: 50px 30px;
     }
    .faq p {
      text-align: center;
@@ -565,6 +565,7 @@ html {
    .faq-item {
     border-bottom: 1px solid #333;
     padding: 15px 0px;
+    margin-top: 20px;
     }
    .faq-question {
     cursor: pointer;
