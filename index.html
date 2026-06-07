@@ -1,328 +1,53 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Developer Build Fast Clean And Scalable Website</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-        
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
-    <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Inter", Sans-Serif;
-    }
-      body {
-  background:
-    radial-gradient(circle at top left,
-    rgba(128,0,255,.18),
-    transparent 35%),
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>My Portfolio</title>
+     <style src="css/Style.css"></style>
+   </head>
+   <body>
+     <header>
+       <nav>
+         <div class="left">
+           
+          <i class="fa-solid fa-laptop-code"></i>
+          <p>ANWARSU</p>
+          </div>
+      
+          <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          </div>
+      
+          <div class="desktop-menu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Project</a>
+          <a href="#service">Service</a>
+          <a href="mailto:oanwarsuyitno@gmail.com?subject=Project%20Inquiry&body=Hello%20Anwar,%20I%20want%20to%20discuss%20a%20website%20project.">Contact</a>
+           </div>
+        </nav>
+    </header>
     
-    radial-gradient(circle at top right,
-    rgba(0,140,255,.12),
-    transparent 35%),
+    <div class="overlay"></div>
+    <div class="mobile-menu">
+      <a href="#home">Home</a>
+      <a href="#service">Service</a>
+      <a href="#about">About</a>
+      <a href="#projects">Project</a>
+      <a href="mailto:oanwarsuyitno@gmail.com?subject=Project%20Inquiry&body=Hello%20Anwar,%20I%20want%20to%20discuss%20a%20website%20project.">Contact</a>
+     </div>
+ 
+   <main>
     
-    #080808;
-       color: white;
-       line-height: 1.6;
-      }
-      /* NAVBAR */
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #080808;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 10px;
-        position: fixed;
-        z-index: 9999;
-        width: 100%;
-        top:0;
-        left:0;
-      }
-      
-      nav img {
-        height: 40px;
-        width: 40px;
-      }
-      nav ul {
-        display: flex;
-        gap: 10px;
-        list-style: none;
-      }
-      
-      nav a {
-        font-size: 16px;
-        color: white;
-        text-decoration: none;
-      }
-      nav a:hover {
-        color: #38bdf8;
-      }
-      
-      .navbuton {
-       background: white; 
-       width: 100px;
-       color: black;
-       padding: 5px;
-       border-radius: 20px;
-       cursor: pointer;
-       font-size: 16px;
-      }
-      /* HERO */
-      .hero {
-        display: flex;
-        flex-direction: column;
-        justify-content: center ;
-        font-size: 16px;
-        align-items: center;
-        padding: 180px 10px 70px 10px;
-        text-align: center;
-      }
-      
-      .hero h1 {
-        font-size: 40px;
-      }
-      
-      .hero p {
-        margin-top: 10px;
-        color: #94a3b8;
-      }
-      
-      .btn{
-        display: inline-block;
-        text-decoration: none;
-        margin-top: 20px;
-        padding: 10px 20px;
-        border: 0 10px 30px rgba(59,130,246,.35);
-        border-radius: 8px;
-        background: white;
-        color: #0f172a;
-        font-size: 16px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      .btn:hover {
-        background: #D9D9D9;
-      }
-      .animasi {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 80px;
-        gap: 25px;
-      }
-
-.stat {
-  text-align: center;
-}
-
-.stat h3 {
-  font-size: 45px;
-  color: #2563eb;
-}
-
-.stat p {
-  font-size: 17px;
-  color: #666;
-  margin-top:10px;
-}
-      
-      /* TRUST */
-      .container {
-        width: 100%;
-        overflow: hidden;
-        padding: 80px 0;
-        margin-top: 10px;
-      }
-      
-      .title {
-        text-align: center;
-        font-size: 40px;
-        margin-bottom: 60px;
-      }
-      .title span {
-        color: #3b82f6;
-      }
-      
-      /* SLIDER */
-      .slider {
-        display: flex;
-        gap: 20px;
-
-         overflow-x: auto;
-          scroll-behavior: smooth;
-
-          padding: 10px 20px 20px;
-
-            scroll-snap-type: x mandatory;
-
-           -webkit-overflow-scrolling: touch;
-            }
-
-      /* sembunyikan scrollbar */
-         .slider::-webkit-scrollbar {
-           display: none;
-         }
-
-          .slider {
-  scrollbar-width: none;
-}
-      
-      /* CARD */
-      .card {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        width: 320px;
-        min-width: 300px;
-        scroll-snap-align: center;
-        flex-shrink: 0;
-        min-height: 280px;
-        height: auto;
-        padding: 35px;
-        border-radius: 32px;
-        background: rgba(255,255,255,0.06);
-        border: 1px solid rgba(255,255,255,0.08);
-        background: rgba(255,255,255,0.08);
-        overflow: hidden;
-        transition: .4s ease;
-        flex-shrink: 0;
-      }
-      
-      /* GLOW ORB */
-      .card:before {
-        content: "";
-        position: absolute;
-        width: 220px;
-        height: 220px;
-        background: radial-gradient(circle, rgba(59,130,246,.28),transparent 70%);
-        top: -80px;
-        right: -80px;
-        transition: .5s;
-      }
-      .card:hover {
-        transform: translateY(-8px);
-        border-color: rgba(59,130,246,.4);
-        box-shadow: 0 8px 20px rgba(59,130,246,.15);
-      }
-      .card:hover::before {
-        transform: scale(1.5);
-      }
-      
-      /* ICON */
-     .icon {
-       width: 75px;
-       height: 75px;
-       border-radius: 24px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       margin-bottom: 25px;
-       background: linear-gradient(135deg,#2563eb,#7c3aed);
-       font-size: 30px;
-       box-shadow: 0 10px 30px rgba(59,130,246,.35);
-     }
-     .card h2 {
-       font-size: 25px;
-       margin-bottom: 15px;
-     }
-     .card p {
-       color: #94a3b8;
-       line-height: 1.8;
-       font-size: 15px;
-     }
-     .card ul {
-       padding-left: 20px;
-       margin-top: 10px;
-      }
-      
-      /* Project */
-      .card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover; 
-      }
-      .project-btn {
-        display: flex;
-        justify-content: space-between;
-        margin-top:10px;
-        gap: 3px;
-      }
-      .link {
-        font-size: 12px;
-        background: white;
-        text-decoration: none;
-      }
-      /* about */
-      .about {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-        padding: 20px;
-      }
-      .about img {
-        width: 200px;
-        height: 250px;
-        object-fit: cover;
-      }
-       .about h1 {
-        font-size: 40px;
-        margin-top:10px;
-        margin-bottom: 40px;
-      }
-      .about h2 {
-        margin-top:10px;
-      }
-      .about p {
-        margin-top: 7px;
-        text-align: center;
-       }
-
-     footer {
-       text-align: center;
-       padding: 40px 0;
-       color: #94a3b8;
-      }
-
-
-}
-    </style> 
-  </head>
-  <body>
-   
-      <nav>
-        <img src="img/logo-name" alt="logo">
-      <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#service">Service</a></li>
-      <li><a class="navbuton" href="mailto:oanwarsuyitno@gmail.com?subject=Project%20Inquiry&body=Hello%20Anwar,%20I%20want%20to%20discuss%20a%20website%20project.">Contact</a></li>
-      </ul>
-     </nav>
-     
+   <section id="home" class="hero">
+    <div>
+        <h1>Professional Web Developer for Business & E-commerce Websites</h1>
+        <p>Fullstack developer specializing in responsive UI, clean code, and scalable web applications</p>
+        <a class="btn" href="#projects" class="btn">See projects >></a>
     
-   
-    <!-- HERO -->
-    <section id="home" class="hero">
-     <h1>I Build Fast & Modern Frontend Experiences</h1> 
-     <p>Frontend developer specializing in responsive UI, clean code, and scalable web applications.</p>
-     
-    <a class="btn" href="#projects">View Projects >></a>
-       
        <div class="animasi">
       
       <div class="stat">
@@ -340,294 +65,360 @@
        <p>Years Learning</p>
       </div>
      </div>
-    </section>
+     </div>
+   </section>
+  
+    <!-- Service -->
+   <section class="service" id="service">
+    <h2 class="title">SERVICES</h2>
+    <p style="font-weight:bold;">Driving Exellence In Every Project</p>
+ 
+    <span style="margin-top:10px;" class="line">
+    </span>
     
-    <!-- TRUST -->
-    <section class="container">
-      <h1 class="title">Why <span>Choose Me?</span></h1>
+    <div class="slider">
       
-      <div class="slider">
-        
-        <!-- CARD 1 -->
-        <div class="card">
-          <div class="icon">
-            <i class="fas fa-rocket"></i>
-          </div>
-          
-          <h2>Fast Performance</h2>
-          
-          <p>
-            Optimized website with lightning speed and smooth interaction
-          </p>
-        </div>
-        
-        <!-- CARD 2 -->
-        <div class="card">
-          <div class="icon">
-            <i class="fas fa-laptop-code"></i>
-            </div>
-            <h2>Responsive Design</h2>
-            
-            <p>Fully responsive layouts for dekstop, website and mobile</p>
-          </div>
-          
-          <!-- CARD 3 -->
-          <div class="card">
-            <div class="icon">
-              <i class="fas fa-wand-magic-sparkles"></i>
-            </div>
-            
-            <h2>Modern UI</h2>
-            
-            <p>
-              Clean, elegant and visually appealing user interface
-            </p>
-          </div>
-          
-          <!-- CARD 4 -->
-          <div class="card">
-            <div class="icon">
-              <i class="fas fa-code"></i>
-            </div>
-            
-            <h2>Clean Code</h2>
-            
-            <p>Maintainable and scalable code structure for project</p>
-          </div>
-        </div>
-     </section>
-    <!-- SKILL -->
-    <section class="container">
-      <h1 class="title">Core Frontend Skills</h1>
+      <div class="card">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h2>Web Development</h2>
+        <span class="line"></span>
+        <p>Designing and developing responsive websites with modern technologies, optimized performance, and intuitive user interfaces.</p>
+      </div>
       
-      <div class="slider">
+      <div class="card">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <h2>E-comerce Website</h2>
+        <span class="line"></span>
+        <p>Deliver custom e-commerce websites with intuitive user interfaces, secure payment systems, and seamless shopping experiences across all devices.</p>
+      </div>
+      
+      <div class="card">
+        <i class="fa-solid fa-gears"></i>
         
-        <!-- CARD 1 -->
-        <div class="card">
-          <h2>Frontend Development</h2>
-         <ul>
-           <li>HTML5</li>
-           <li>CSS3</li>
-           <li>JavaScript (ES6+)</li>
-           <li>Responsive Design</li>
-         </ul>
+        <h2>Rest API</h2>
+        <span class="line"></span>
+        <p>Design and implement high-performance RESTful APIs with robust security, scalability, and seamless system integration.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Workflow -->
+  <section class="workflow">
+    <h2 class="title">WORKFLOW</h2>
+    <p style="font-weight:bold;">Simple Steps Great Results</p>
+    <span class="line"></span>
+    
+    <div class="slider">
+      
+      <div class="card">
+        <span>01</span>
+        <span class="line"></span>
+        <h2>Consultation</h2>
+        
+        
+        <p>Understanding business needs and the desired website objectives</p>
+      </div>
+      
+      <div class="card">
+        <span>02</span>
+        <span class="line"></span>
+        <h2>Planning</h2>
+        
+        
+        <p>Structuring pages, features, and development strategies</p>
+      </div>
+      
+      <div class="card">
+        <span>03</span>
+        <span class="line"></span>
+        <h2>Development</h2>
+        
+        
+        <p>Building a responsive, fast, and user-friendly website</p>
+      </div>
+      
+      <div class="card">
+        <span>04</span>
+        <span class="line"></span>
+        <h2>Revision & Refinement</h2>
+        
+        
+        <p>Implementing improvements based on the feedback provided</p>
+      </div>
+      
+      <div class="card">
+        <span>05</span>
+        <span class="line">
+        </span>
+        <h2>Website Ready For Use</h2>
+        
+        <p>The website is published and ready to help your business grow</p>
+      </div>
+    </div>
+
+   <!-- Features -->
+   <section class="features">
+  <p class="subtitle">Premium Features</p>
+  <h2 class="title">Express Functionality</h2>
+
+  <div class="features-grid">
+
+    <!-- Kiri -->
+    <div class="feature-column">
+
+      <div class="feature-item section hidden">
+        <i class="fa-solid fa-mobile-screen"></i>
+        <h3>Full Responsive Design</h3>
+        <p>
+          Responsive websites adapt seamlessly across mobile,
+          tablet, laptop and desktop devices.
+        </p>
+      </div>
+      
+           <div class="feature-item section hidden">
+        <i class="fa-solid fa-rocket"></i>
+        <h3>Website Light Speed</h3>
+        <p>
+          Optimized performance and fast loading times improve
+          user experience and SEO rankings.
+        </p>
+      </div>
+
+      <div class="feature-item section hidden">
+        <i class="fa-solid fa-globe"></i>
+        <h3>Social Media</h3>
+        <p>
+          Connect your website with social platforms to
+          increase engagement and reach.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Kanan -->
+    <div class="feature-column">
+      
+       <div class="feature-item section hidden">
+       <i class="fa-solid fa-comments"></i>
+       <h3>Live Chat</h3>
+        <p>
+          Real-time communication helps customers and
+          increases conversion rates.
+        </p>
         </div>
+      
+
+      <div class="feature-item section hidden">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>SSL Secure Website</h3>
+        <p>
+          Secure and protected websites with SSL certification.
+        </p>
+      </div>
+
+      <div class="feature-item section hidden">
+        <i class="fa-solid fa-headset"></i>
+        <h3>24/7 Support</h3>
+        <p>
+          Reliable support whenever you need assistance.
+        </p>
+      </div>
+       </div>
+    </div>
+
+  </div>
+</section>
+    
+  </section>
+  
+  <!-- About -->
+  <section id="about">
+
+  <h2 class="title">ABOUT</h2>
+  <p>Who Am I?</p>
+  <span class="line"></span>
+
+  <div class="box-about">
+    
+    <img src="img/myfoto.jpg" alt="Mr anwar">
+
+    <div class="about-content">
+      <h3>Anwar Suyitno</h3>
+      <p>Mern stack developer</p>
+
+      <p>
+        I help businesses and individuals build modern, responsive, and high-performing websites. From landing pages to custom web applications, I focus on delivering clean design, smooth user experiences, and reliable frontend solutions that support business growth.
+      </p>
+
+      <a href="mailto:oanwarsuyitno@gmail.com?subject=Project%20Inquiry&body=Hello%20Anwar,%20I%20want%20to%20discuss%20a%20website%20project" class="btn">Contact Me</a>
+    </div>
+    
+    
+    </div>
+</section>
+  
+  <!-- Projects -->
+  <section class="project" id="projects">
+    <h2 class="title">PROJECTS</h2>
+    <p style="font-weight:bold;">Discover Some Of My Recent Projects</p>
+    <span class="line"></span>
+    
+    <div class="slider">
+      
+      <div class="card">
+        <h2>E-commerce Website</h2>
+        <span class="line"></span>
         
-        <!-- CARD 2 -->
-        <div class="card">
-          <h2>Framework & Library</h2>
-          
-          <ul>
-            <li>React.js</li>
-            <li>Vite</li>
-            <li>React Router</li>
-          </ul>
-        </div>
+        <img src="images/ecomerce.jpg" alt="live ecomerce" class="pict">
+        <p>Responsive e-commerce website with product search,
+shopping cart, checkout flow, and REST API integration.</p>
         
-        <!-- CARD 3 -->
-        <div class="card">
-          <h2>Styling</h2>
+        <div>
+            <p>Tech stack</p>
+            <span>• React</span>
+            <span>• Expressjs</span>
+            <span>• Mongodb</span>
+          </div>
           
-          <ul>
-            <li>CSS Flexbox</li>
-            <li>CSS Grid</li>
-            <li>Tailwind CSS</li>
-            <li>Animation</li>
-          </ul>
-        </div>
-        
-        <!-- CARD 4 -->
-        <div class="card">
-          <h2>
-            Tools
-          </h2>
-          
-          <ul>
-            <li>Git & Github</li>
-            <li>Figma to Code</li>
-            <li>REST API</li>
-          </ul>
-        </div>
-        
-        <!-- CARD 5 -->
-        <div class="card">
-          <h2>Performance</h2>
-          
-          <ul>
-            <li>Responsive UI</li>
-            <li>Clean Component Structure</li>
-            <li>Reusable Code</li>
-          </ul>
+        <div class="project-btn">
+          <a href="#">[ Live Demo ]</a>
+          <a href="#">[ Source Code ]</a>
         </div>
       </div>
-    </section>
-    
-    <!-- Project -->
-    <section id="projects" class="container">
-      <h2 class="title">Projects</h2>
-      <div class="slider">
+      
+      <div class="card">
+        <h2>Dashboard Admin</h2>
+        <span class="line"></span>
+        <img src="images/dashboard.jpg" alt="dashboard" class="pict">
         
-        <div class="card">
-          <img src="img/streaming.jpg" alt="streaming website">
-          <h2>Streaming Website</h2>
-          <p>✅ Responsive</p>
-          <p>✅ SEO Friendly</p>
-          <p>✅ Fast loading</p>
-          <div class="project-btn">
-            <a class="link" href="streaming-website">[ Live Demo ]</a>
-            <a class="link" href="https://github.com/itsanwarsu">[ Source Code ]</a>
+        <p>Built a responsive admin dashboard using React, featuring interactive charts, data management, search functionality, and a clean user interface.</p>
+        
+        <div>
+            <p>Tech stack</p>
+            <span>• React</span>
+            <span>• Expressjs</span>
+            <span>• Mongodb</span>
           </div>
+          
+        <div class="project-btn">
+          <a href="#">[ Live Demo ]</a>
+          <a href="#">[ Source Code ]</a>
         </div>
       </div>
-     </section> 
-      <!-- Service -->
-      <section id="service" class="container">
-        <h2 class="title">
-          Service
-        </h2>
-        
-        <div class="slider">
-          
-          <div class="card">
-            <h2>💻 Landing Page Development</h2>
-            <p>✅ Responsive</p>
-            <p>✅ SEO Friendly</p>
-            <p>✅ Fast Loading</p>
-          </div>
-          
-          <div class="card">
-            <h2>🏢 Company Profile Website</h2>
-            <p>✅ Modern UI</p>
-            <p>✅ Mobile Friendly</p>
-            <p>✅ Contact Form</p>
-          </div>
-          
-          <div class="card">
-            <h2>🎨 Website Redesign</h2>
-            <p>✅ Modern UI/UX</p>
-            <p>✅ SEO Friendly</p>
-            <p>✅ Fast Loading</p>
-          </div>
-          
-          <div class="card">
-            <h2>🔗 API Integration</h2>
-            <p>✅ Weather API</p>
-            <p>✅ REST API</p>
-            <p>✅ Dynamic data display</p>
-          </div>
-        </div>
-      </section>
-    
-    <!-- Workflow -->
-    <section class="container">
-      <h2 class="title">Workflow</h2>
       
-      <div class="slider">
+      <div class="card">
+        <h2>Booking Website</h2>
+        <span class="line"></span>
         
-        <div class="card">
-          <span>01</span>
-          <h2>Consultation</h2>
-          <p>
-Understanding business needs and the desired website objectives</p>
-        </div>
+        <img src="img/booking.jpg" alt="booking" class="pict">
+        <p>Built a responsive online booking platform featuring real-time availability, reservation management, and a seamless user experience.</p>
+ 
+          <div>
+            <p>Tech stack</p>
+            <span>• React</span>
+            <span>• Expressjs</span>
+            <span>• Mongodb</span>
+          </div>
+ 
         
-        <div class="card">
-          <span>02</span>
-          <h2>Planning</h2>
-          <p>Structuring pages, features, and development strategies.</p>
-        </div>
-        
-        <div class="card">
-          <span>03</span>
-          <h2>Development</h2>
-          <p>
-Building a responsive, fast, and user-friendly website.</p>
-        </div>
-        
-         <div class="card">
-          <span>04</span>
-          <h2>Refision and Refinement</h2>
-          <p>
-Implementing improvements based on the feedback provided.</p>
-        </div>
-        
-        <div class="card">
-          <span>05</span>
-          <h2>Website Ready For Use</h2>
-          <p>
-The website is published and ready to help your business grow.</p>
+        <div class="project-btn">
+          <a href="#">[ Live Demo ]</a>
+          <a href="#">[ Source Code ]</a>
         </div>
       </div>
-    </section>
+    </div>
     
-    <!-- about -->
-    <section id="about" class="about">
-      <h1>About</h1>
-        <img src="img/anwarsu.jpg" alt="anwar suyitno">
-        <h2>Anwar Suyitno</h2>
-        <p>Frontend Developer<p>
-      <p>I am a Frontend Developer focused on building modern, responsive, and user-friendly websites. I enjoy transforming designs into fast, clean, and engaging web experiences.</p>
-      
-    </section>
+  </section>
+  
+  <!-- FAQ -->
+  <section class="faq">
+    <h2 class="title">FAQ</h2>
+    <p>Frequently Asked Questions</p>
+    <span class="line"></span>
     
-    <footer>
-      ©2026 Itsanwarsu
-      </footer>
-    <script>
-      const counters =
-  document.querySelectorAll(".counter");
+    <div class="faq-item">
+      <div class="faq-question">
+        Q: How much does a website cost?
+      </div>
+      <div class="faq-answer">
+        A: its totally depend on your project needs
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        Q: Do you provide hosting and maintenance?
+      </div>
+     <div class="faq-answer">
+       A: Yes, we offer secure hosting packages and ongoing support
+     </div>
+    </div>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        Q: How long does it take to design a website
+      </div>
+      <div class="faq-answer">
+        A: Typically 5-7 days depending on project scoope
+      </div>
+    </div>
+  </section>
+  <!-- CTA -->
+   <section class="cta">
+    <div class="cta-header">
+    <h2>GET IN TOUCH</h2>
+    <div class="cta-line"></div>
+    </div>
 
-const observer =
-  new IntersectionObserver(entries => {
+    <p class="cta-text">
+    Need a Website for Your Business?
+    Let's Build Something Amazing Together.
+    </p>
 
-    entries.forEach(entry => {
+    <div class="cta-grid">
 
-      if (entry.isIntersecting) {
+    <div class="cta-card">
+     <h3>Quick Links</h3>
+     <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="mailto:oanwarsuyitno@gmail.com?subject=Project%20Inquiry&body=Hello%20Anwar,%20I%20want%20to%20discuss%20a%20website%20project">Contact</a></li>
+      </ul>
+     </div>
 
-        const counter =
-          entry.target;
+     <div class="cta-card">
+      <h3>Our Services</h3>
+      <ul>
+        <li><a href="#">Web Development</a></li>
+        <li><a href="#">E-Commerce Website</a></li>
+        <li><a href="#">REST API</a></li>
+      </ul>
+    </div>
 
-        const target =
-          Number(counter.dataset.target);
+    <div class="cta-card">
+      <h3>Follow Me</h3>
 
-        let current = 0;
+      <div class="social-icons">
+        <a href="https://x.com/AnwarSuyit76119">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
 
-        const updateCounter = () => {
+        <a href="https://github.com/itsanwarsu">
+          <i class="fa-brands fa-github"></i>
+        </a>
 
-          const increment =
-            target / 80;
+        <a href="#">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
 
-          current += increment;
-
-          if (current < target) {
-
-            counter.textContent =
-              Math.ceil(current);
-
-            requestAnimationFrame(
-              updateCounter
-            );
-
-          } else {
-
-            counter.textContent =
-              target + "+";
-          }
-        };
-
-        updateCounter();
-
-        observer.unobserve(counter);
-
-      }
-
-    });
-
-  });
-
-counters.forEach(counter => {
-  observer.observe(counter);
-});
-    </script>
+   </div>
+   </section>
+ 
+    </main>
+    <footer>Copyright ©2026 anwarsu</footer>
+    <script src="js/Main.js"></script>
   </body>
-</html>
+        </html>
