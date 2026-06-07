@@ -167,9 +167,7 @@ html {
   /* Hero */
   .hero {
     height: 100vh;
-    background:
-    url:('img/hero.png');
-
+    background: url('img/hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -382,7 +380,7 @@ html {
    .about {
      background: #87ceeb;
    }
-   .about p {
+   .about-p {
      text-align: center;
      font-weight: bold;
    }
@@ -397,8 +395,8 @@ html {
     }
 
    .about img{
-    width:200px;
-    height:200px;
+    width:150px;
+    height:150px;
     object-fit:cover;
     border-radius:20px;
     border: 2px solid red;
