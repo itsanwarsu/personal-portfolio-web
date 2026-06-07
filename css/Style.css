@@ -175,13 +175,7 @@ html {
     display:flex;
   align-items:center;
   justify-content:flex-start;
-    }
-  .hero::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.20);
-    }
+  }
 
   .hero-content{
     position: relative;
@@ -206,7 +200,7 @@ html {
    .btn:hover {
     background: darkorange;
     }
-   /* Service */
+   /* Seconte/
    .service {
     text-align: center;
     }
