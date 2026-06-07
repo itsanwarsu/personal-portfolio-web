@@ -8,7 +8,7 @@ html {
     font-family: Inter, Sans-Serif;
     }
    body {
-    background: #f4f4f4;
+    background: #E8DDD4;
     color: black;
     line-height: 1.6;
     }
@@ -184,7 +184,7 @@ html {
     }
    .con {
      padding: 10px 40px;
-     color: #0F4AA3;
+     color: #FF8C00;
      font-weight: bold;
      margin-top: 150px;
 }
