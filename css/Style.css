@@ -166,19 +166,36 @@ html {
   }
   /* Hero */
   .hero {
-    height: 75vh;
+    position: relative;
     background: url('../img/hero.png');
     background-size: cover;
     background-position: center;
-
-    display: flex;
-    align-items: center;
     }
-    .con {
-      padding: 10px 40px;
-      color: black;
-
+  .hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
     }
+
+  .hero-content{
+    position: relative;
+    z-index: 1;
+    color: white;
+    }
+   .con {
+     padding: 10px 40px;
+     color: black;
+    }
+   .con h1{
+     color: white;
+     text-shadow: 2px 2px 8px rgba(0,0,0,.7);
+}
+
+.con p{
+  color: #f1f1f1;
+  text-shadow: 1px 1px 5px rgba(0,0,0,.7);
+}
    .btn {
     display: inline-block;
     padding: 10px 16px;
