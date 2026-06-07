@@ -169,7 +169,7 @@ html {
     height: 100vh;
     background: url('../img/hero.png');
     background-size: cover;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
 
     display: flex;
@@ -178,7 +178,9 @@ html {
     padding: 20px 10px;
     }
     .con {
-      padding: 10px 20px;
+      padding: 10px 40px;
+      color: white;
+
     }
    .btn {
     display: inline-block;
@@ -400,6 +402,7 @@ html {
     object-fit:cover;
     border-radius:20px;
     border: 2px solid red;
+    margin-top:20px;
     }
 
    .about-content{
