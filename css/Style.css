@@ -166,7 +166,7 @@ html {
   }
   /* Hero */
   .hero {
-    min-height: 500px;
+    min-height: 800px;
     position: relative;
     background: url('../img/hero.png');
     background-size: cover;
@@ -180,7 +180,7 @@ html {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.20);
     }
 
   .hero-content{
