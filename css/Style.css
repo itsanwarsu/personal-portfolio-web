@@ -185,6 +185,8 @@ html {
    .con {
      padding: 10px 40px;
      color: white;
+     font-weight: bold;
+     margin-top: 20px;
 }
 
    .btn {
