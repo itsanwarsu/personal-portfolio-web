@@ -166,18 +166,17 @@ html {
   }
   /* Hero */
   .hero {
-    height: 100vh;
+    height: 75vh;
     background: url('../img/hero.png');
     background-size: cover;
-    background-position: 50% 30%;
-    background-repeat: no-repeat;
+    background-position: center;
 
     display: flex;
     align-items: center;
     }
     .con {
       padding: 10px 40px;
-      color: white;
+      color: black;
 
     }
    .btn {
