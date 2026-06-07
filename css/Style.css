@@ -167,7 +167,7 @@ html {
   /* Hero */
   .hero {
     height: 100vh;
-    background: url('img/hero.png');
+    background: url('../img/hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -394,9 +394,9 @@ html {
     padding: 0px 20px;
     }
 
-   .about img{
-    width:150px;
-    height:150px;
+   .box-about img{
+    width:300px;
+    height:350px;
     object-fit:cover;
     border-radius:20px;
     border: 2px solid red;
@@ -415,7 +415,7 @@ html {
     margin-bottom:20px;
     }
    @media(max-width:768px){
-    .about{
+    .box-about{
      flex-direction:column;
      text-align:center;
     }
