@@ -8,7 +8,7 @@ html {
     font-family: Inter, Sans-Serif;
     }
    body {
-    background: #E8DDD4;
+    background: #f4f4f4;
     color: black;
     line-height: 1.6;
     }
@@ -167,11 +167,6 @@ html {
   /* Hero */
   .hero {
     min-height: 800px;
-    position: relative;
-    background: url('../img/hero.png');
-    background-size: cover;
-    background-position: center;
-
     display:flex;
   align-items:center;
   justify-content:flex-start;
@@ -184,7 +179,7 @@ html {
     }
    .con {
      padding: 10px 40px;
-     color: #FF8C00;
+     color: #ffffff;
      font-weight: bold;
      margin-top: 150px;
 }
