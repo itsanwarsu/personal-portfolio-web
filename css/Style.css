@@ -167,7 +167,7 @@ html {
   /* Hero */
   .hero {
     min-height: 800px;
-    background:
+    background:rgba(0, 0, 0, 0.3)
     url('../img/hero.png');
 
     background-size: cover;
@@ -180,7 +180,7 @@ html {
   }
    .con {
      padding: 10px 40px;
-     color: #000000;
+     color: #0a192f;
      font-weight: bold;
      margin-top: 100px;
 }
