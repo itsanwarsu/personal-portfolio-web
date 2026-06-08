@@ -183,6 +183,7 @@ html {
      color: #0a192f;
      font-weight: bold;
      margin-top: 100px;
+     background: rgba(0, 0, 0, 0.3);
 }
 
    .btn {
