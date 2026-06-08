@@ -167,6 +167,13 @@ html {
   /* Hero */
   .hero {
     min-height: 800px;
+    background:
+    url('.../img/hero.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display:flex;
   align-items:center;
   justify-content:flex-start;
