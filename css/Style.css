@@ -179,11 +179,10 @@ html {
   justify-content:flex-start;
   }
    .con {
-     min-height: 900px;
+     min-height: 800px;
      padding: 300px 40px;
      color: white;
      font-weight: bold;
-     margin-top: 100px;
      background: rgba(0, 0, 0, 0.5);
 }
 
