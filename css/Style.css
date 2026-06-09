@@ -167,7 +167,7 @@ html {
   /* Hero */
   .hero {
     min-height: 800px;
-    background:rgba(0, 0, 0, 0.5), 
+    background:
     url('../img/hero.png');
 
     background-size: cover;
@@ -179,8 +179,8 @@ html {
   justify-content:flex-start;
   }
    .con {
-     padding: 10px 40px;
-     color: #0a192f;
+     padding: 30px 40px;
+     color: white;
      font-weight: bold;
      margin-top: 100px;
      background: rgba(0, 0, 0, 0.3);
