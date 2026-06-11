@@ -1,8 +1,8 @@
 function initHamburger() {
   const hamburger = document.querySelector(".hamburger");
   const menu = document.querySelector(".mobile-menu");
-  
   const overlay = document.querySelector(".overlay");
+  const menulink = document.querySelectorAll(".mobile-menu a");
   
   const body = document.body;
   
@@ -21,12 +21,14 @@ function initHamburger() {
   overlay.classList.remove("active");
   body.classList.remove("no-scroll");
   });
-  menu.addEventListener("click", () =>
-  {
+  
+  menulink.forEach(link => {
+    link.addEventListener("click", () => {
   menu.classList.remove("active");
   overlay.classList.remove("active");
   body.classList.remove("no-scroll");
   hamburger.classList.remove("active");
+  });
   });
   }
   
@@ -60,15 +62,28 @@ function initHamburger() {
   }
 
   function initfaq() {
-  const faqitems = document.querySelectorAll(".faq-item");
+const faqItems =
+document.querySelectorAll(".faq-item");
 
-  faqitems.forEach(item => {
-  const question = item.querySelector(".faq-question");
+faqItems.forEach(item => {
+
+  const question =
+  item.querySelector(".faq-question");
+
   question.addEventListener("click", () => {
+
+    faqItems.forEach(el => {
+      if(el !== item){
+        el.classList.remove("active");
+      }
+    });
+
     item.classList.toggle("active");
+
   });
-  });
-  }
+
+});
+};
 
   function initcounter() {
   const counters =
